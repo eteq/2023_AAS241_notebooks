@@ -1,0 +1,13 @@
+spec = list(h.get_spectra().values())[0]
+region = h.get_spectral_regions()['Subset 1']
+region
+---
+from specutils.analysis import centroid
+
+centroid(spec, region)
+---
+import numpy as np
+from specutils import manipulation
+
+base = np.min(manipulation.extract_region(spec, region).flux)
+centroid(spec-base, region)
