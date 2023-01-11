@@ -28,3 +28,8 @@ qr2.make_image(image_factory=StyledPilImage, embeded_image=logo_img).save("qr_st
 qr3 = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_Q)
 qr3.add_data('https://timeseries.science.stsci.edu/')
 qr3.make_image(image_factory=StyledPilImage, embeded_image=logo_img).save("qr_tike.png")
+
+
+qr4 = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_Q)
+qr4.add_data('https://eteq.github.io/2023_AAS241_notebooks/aas241_notebook_links.html')
+qr4.make_image(image_factory=StyledPilImage, embeded_image=logo_img).save("qr_links.png")
